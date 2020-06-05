@@ -1,1 +1,1 @@
-#slider-plugin插件（慕课网学习）
+# slider-plugin插件（mkw）
