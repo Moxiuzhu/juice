@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>slider-plugin</title>
+	<link rel="stylesheet" href="./resource/reset.css">
+	<style>
+    body {
+      background: #ccc;
+    }
+
+    .scroll-demo {
+      width: 540px;
+      border: 1px solid #e5e5e5;
+      background: #fff;
+      margin: 30px auto;
+    }
+
+    /* 标签切换区 */
+
+    .scroll-tab {
+      height: 34px;
+      border-bottom: 1px solid #e5e5e5;
+      color: #666;
+      background: #f8f8f8;
+    }
+
+    .scroll-tab .tab-item {
+      float: left;
+      font: 14px/34px "Microsoft Yahei";
+      height: 34px;
+      text-align: center;
+      border-right: 1px solid #e5e5e5;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    .scroll-tab .tab-active {
+      color: #00be3c;
+      background: #fff;
+      border-top: 2px solid #00be3c;
+    }
+
+    /* 滚动内容区 */
+
+    .scroll-wrap {
+      position: relative;
+      width: 100%;
+      height: 300px;
+    }
+
+    /* 滚动内容 */
+
+    .scroll-wrap .scroll-cont {
+      height: 100%;
+      padding: 0 15px;
+      overflow: hidden;
+    }
+
+    .scroll-wrap .scroll-cont h3 {
+      font: 16px/3 "Microsoft Yahei";
+      text-align: center;
+    }
+
+    .scroll-wrap .scroll-cont p {
+      font-size: 14px;
+      line-height: 20px;
+      text-indent: 2em;
+      margin-bottom: 10px;
+    }
+
+    /* 防止margin合并 */
+
+    .scroll-wrap .scroll-cont .scroll-ol {
+      padding-bottom: 1px;
+    }
+
+    /* 滚动条 */
+
+    .scroll-wrap .scroll-bar {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 10px;
+      height: 100%;
+      background-color: #eaeaea;
+    }
+
+    /* 滑块 */
+
+    .scroll-wrap .scroll-slider {
+      position: absolute;
+      top: 0;
+      left: 1px;
+      width: 8px;
+      height: 30px;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+	<div class="scroll-demo">
+		<!-- 标签切换区 -->
+		<ul class="scroll-tab clearfix">
+			<li class="tab-item tab-active">第一篇</li>
+			<li class="tab-item">第二篇</li>
+			<li class="tab-item">第三篇</li>
+			<li class="tab-item">第四篇</li>
+		</ul>
+		<!-- 滚动内容区 -->
+		<div class="scroll-wrap">
+			<!-- 内容 -->
+			<div class="scroll-cont">
+				<h3 class="anchor">春天来了</h3>
+		        <div class="scroll-ol">
+		          <p>春天来了，百度花园里开满了一朵朵小花，小燕子和小鸟从南方飞回来了。小草变绿了，果园里的树开满了花儿，小河冰雪融化了，春天真美呀！</p>
+		          <p>春天来了，百度花园里开满了一朵朵小花，小燕子和小鸟从南方飞回来了。小草变绿了，果园里的树开满了花儿，小河冰雪融化了，春天真美呀！</p>
+		          <p>春天来了，百度花园里开满了一朵朵小花，小燕子和小鸟从南方飞回来了。小草变绿了，果园里的树开满了花儿，小河冰雪融化了，春天真美呀！</p>
+
+		        </div>
+		        <h3 class="anchor">夏天来了</h3>
+		        <div class="scroll-ol">
+		          <p>夏天来了2113，大树下面的小花都开了，五彩斑斓真美啊！在大路旁边，大树长得非常的繁茂，宽大的树叶像孩子们的手在微风中欢快的拍打着。</p>
+		          <p>夏天来了，我便会欣赏辛弃疾“明月别枝惊鹊，清风半夜鸣蝉”的清幽美景。</p>
+		          <p>L夏天来了，我听5261见它的脚步声了，4102它踏着烈日，风风火火地来了。</p>
+		          <p>夏天来了，彼时的我已不再蜷缩在家，带着相机去大自然寻找“生如夏花之绚烂”。夏天来了，彼时的我带着青春的张扬，换上一件栀子花的衬衫，衣角温柔地在温暖的阳光下摆动。</p>
+
+		        </div>
+		        <h3 class="anchor">秋天来了</h3>
+		        <div class="scroll-ol">
+		          <p>一夜秋风，一夜秋雨，秋天来了，水果、庄稼都成熟了，是丰收的好季节。秋天，柿子成熟了，那满树橙色的柿子，好像一个个灯笼。秋天，石榴也成熟了，石榴笑得裂开了嘴，露出了一颗颗石榴籽，像一颗颗小小的红钻石。秋天真美啊！</p>
+		          <p>秋天来了，我家院子里的葡萄硕果累累，一大串一大串挂在葡萄架下，挤在一起，像一群可爱的小娃娃。有红的、紫的、暗紫的、淡绿的，五光十色，美丽极了。摘一颗放进嘴里，甜甜的，酸酸的，味道好极了</p>
+		          <p>秋天来了，万物都有了极大的变化，比如那明朗的天空，现在却变成了灰暗的天气。一阵秋风，一场秋雨，人们穿的衣服也多了很多，从穿裙子一直到穿长袖。走出家门，北风就在人们耳旁呼呼地吹着，送走了夏小姐，迎来了秋姑娘。</p>
+
+		        </div>
+		        <h3 class="anchor">冬天来了</h3>
+		        <div class="scroll-ol">
+		          <p>秋天不知不觉过去了，冬天悄悄来到了我的小屋，小草枯萎了，小花不敢抬头，松树伯伯还挺直腰干站在那里。忽然一种熟悉的声音从我身边划过，哦！原来是北风的声音。真冷呀！北风真是像刀割一样，我赶紧跑回家换了一套衣裳，回家睡觉去了，哎！冬天真冷呀！</p>
+		        </div>
+		        <div class="correct-bot"></div>
+			</div>
+			<!-- 滚动条 -->
+			<div class="scroll-bar">
+				<!-- 滚动滑块儿 -->
+				<div class="scroll-slider"></div>
+			</div>
+		</div>
+	</div>
+	<script src="./resource/jquery.js"></script>
+	<script src="./resource/slider.js"></script>
+	<script type="text/javascript">	
+		new CusScrollBar({
+			contSelector: ".scroll-cont", //滚动内容区选择器
+			barSelector: ".scroll-bar", //滚动条选择器
+			sliderSelector: ".scroll-slider" //滚动滑块儿选择器
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
